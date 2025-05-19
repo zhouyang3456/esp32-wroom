@@ -1,18 +1,14 @@
 #include <Arduino.h>
 
-// put function declarations here:
-int myFunction(int, int);
+#define LED_BLINK 2
 
 void setup() {
-  // put your setup code here, to run once:
-  int result = myFunction(2, 3);
+  pinMode(LED_BLINK, OUTPUT);
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
-}
-
-// put function definitions here:
-int myFunction(int x, int y) {
-  return x + y;
+  digitalWrite(LED_BLINK, HIGH); // turn the LED on (HIGH is the voltage level)
+  delay(1000);                   // wait for a second
+  digitalWrite(LED_BLINK, LOW);  // turn the LED off by making the voltage LOW
+  delay(1000);                   // wait for a second
 }
